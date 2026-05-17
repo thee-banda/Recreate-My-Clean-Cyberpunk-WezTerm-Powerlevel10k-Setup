@@ -34,7 +34,9 @@ Desired visual style:
 - Green git branch and branch icon.
 - Green `✓` on success and pink `✕`/status code on errors.
 - Command execution time should always be visible.
-- Node version should be green, Python version cyan-blue, and time lavender.
+- Node version should be green with a plain `NodeJS` label.
+- Python version should be cyan-blue with a plain `PYTHON` label.
+- Time should be lavender.
 
 For Powerlevel10k, aim for this layout:
 
@@ -87,6 +89,17 @@ typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
   docker_context
   time
 )
+
+function prompt_python_version() {
+  local python=${commands[python]:-${commands[python3]}}
+  [[ -n $python ]] || return
+
+  local version
+  version=$($python --version 2>/dev/null) || return
+  [[ $version == Python\ * ]] || return
+
+  p10k segment -f 117 -i 'PYTHON' -t "${version#Python }"
+}
 
 typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
 typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=' '
@@ -144,6 +157,7 @@ typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=232
 typeset -g POWERLEVEL9K_VIRTUALENV_BACKGROUND=
 typeset -g POWERLEVEL9K_NODE_VERSION_FOREGROUND=114
 typeset -g POWERLEVEL9K_NODE_VERSION_BACKGROUND=
+typeset -g POWERLEVEL9K_NODE_VERSION_VISUAL_IDENTIFIER_EXPANSION='NodeJS'
 typeset -g POWERLEVEL9K_PYTHON_VERSION_FOREGROUND=117
 typeset -g POWERLEVEL9K_PYTHON_VERSION_BACKGROUND=
 typeset -g POWERLEVEL9K_GO_VERSION_FOREGROUND=159

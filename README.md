@@ -2,7 +2,7 @@
 
 A reusable AI prompt for recreating a cozy cyberpunk terminal setup with WezTerm, zsh, Powerlevel10k, transparent prompt segments, and a dark neon city backdrop.
 
-![Clean cyberpunk terminal mockup](assets/mockup.png)
+![Cyberpunk WezTerm and Powerlevel10k terminal poster](assets/poster.png)
 
 The style:
 
@@ -17,6 +17,7 @@ The style:
 - Green prompt arrow
 - Green success status, pink error status
 - Warm yellow command duration
+- `NodeJS` and `PYTHON` runtime version labels
 - Pastel runtime versions and lavender time
 - Hidden hostname/context for a cleaner right prompt
 
