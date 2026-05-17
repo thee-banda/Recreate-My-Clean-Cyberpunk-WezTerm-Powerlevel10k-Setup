@@ -1,19 +1,23 @@
-# Recreate My Clean Cyberpunk WezTerm + Powerlevel10k Setup
+# Recreate My Cyberpunk WezTerm + Powerlevel10k Setup
 
-A reusable Codex prompt for recreating a clean, cozy cyberpunk terminal setup with WezTerm, zsh, and Powerlevel10k.
+A reusable AI prompt for recreating a cozy cyberpunk terminal setup with WezTerm, zsh, Powerlevel10k, transparent prompt segments, and a dark neon city backdrop.
 
 ![Clean cyberpunk terminal mockup](assets/mockup.png)
 
 The style:
 
 - Dark translucent WezTerm background
+- Subtle cyberpunk city backdrop
 - Pastel cyberpunk colors
 - Nerd Font icons
 - Transparent Powerlevel10k prompt segments
 - White app/OS icon
 - Cyan path text
+- Green git branch
 - Green prompt arrow
-- Pastel status, version, duration, and time text
+- Green success status, pink error status
+- Warm yellow command duration
+- Pastel runtime versions and lavender time
 - Hidden hostname/context for a cleaner right prompt
 
 ## How To Use
