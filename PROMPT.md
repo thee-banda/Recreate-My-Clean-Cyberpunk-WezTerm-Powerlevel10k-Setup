@@ -57,6 +57,9 @@ For Powerlevel10k, aim for this layout:
   - `python_version`
   - `go_version`
   - `rust_version`
+  - `dotnet_version`
+  - `php_version`
+  - `java_version`
   - `docker_context`
   - `time`
 - Do not include `context`/hostname in the right prompt.

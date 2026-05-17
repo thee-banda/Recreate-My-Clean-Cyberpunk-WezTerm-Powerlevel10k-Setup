@@ -38,8 +38,13 @@ backup_file "$HOME/.p10k.zsh"
 backup_file "$HOME/.wezterm.lua"
 backup_file "$HOME/.config/wezterm/wezterm.lua"
 
+wezterm_target="$HOME/.wezterm.lua"
+if [[ -e "$HOME/.config/wezterm/wezterm.lua" && ! -e "$HOME/.wezterm.lua" ]]; then
+  wezterm_target="$HOME/.config/wezterm/wezterm.lua"
+fi
+
 cp "$repo_dir/configs/p10k.zsh" "$HOME/.p10k.zsh"
-cp "$repo_dir/configs/wezterm.lua" "$HOME/.wezterm.lua"
+cp "$repo_dir/configs/wezterm.lua" "$wezterm_target"
 cp "$repo_dir/assets/cyberpunk-city.png" "$HOME/.config/wezterm/assets/cyberpunk-city.png"
 cp "$repo_dir/assets/cyberpunk-city.svg" "$HOME/.config/wezterm/assets/cyberpunk-city.svg"
 
@@ -54,7 +59,18 @@ append_once "$HOME/.zshrc" "Cyberpunk WezTerm Powerlevel10k theme" "$p10k_source
 
 zsh -n "$HOME/.p10k.zsh"
 
+for cmd in wezterm zsh; do
+  if ! command -v "$cmd" >/dev/null 2>&1; then
+    printf 'Warning: %s was not found in PATH.\n' "$cmd"
+  fi
+done
+
+if [[ ! -r /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme && ! -r /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
+  printf 'Warning: Powerlevel10k theme file was not found in Homebrew paths.\n'
+fi
+
 printf '\nDone.\n'
+printf 'Installed WezTerm config to: %s\n' "$wezterm_target"
 printf 'Open a new WezTerm tab/window or run: exec zsh\n'
 printf '\nOptional dependencies if missing:\n'
 printf '  brew install --cask wezterm font-meslo-lg-nerd-font\n'

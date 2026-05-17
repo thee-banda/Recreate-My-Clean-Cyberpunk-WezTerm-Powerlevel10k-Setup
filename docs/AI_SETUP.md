@@ -2,6 +2,14 @@
 
 Use this when you want Codex, Claude Code, or another coding agent to install the theme safely.
 
+## Fastest Path
+
+Copy [ONE_SHOT_PROMPT.md](../ONE_SHOT_PROMPT.md) and paste it into your AI coding agent.
+
+That prompt is designed for one-message installation: clone, inspect, back up, install, validate, and report.
+
+## Guided Path
+
 1. Open the repo in your AI coding agent.
 2. Paste the contents of [`PROMPT.md`](../PROMPT.md).
 3. Ask the agent to inspect your local shell and terminal configuration before editing.

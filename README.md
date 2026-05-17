@@ -45,12 +45,21 @@ The included theme keeps the prompt clean while still showing the useful bits:
 ├── configs/             # Reusable WezTerm and Powerlevel10k configs
 ├── docs/                # AI setup and troubleshooting docs
 ├── install.sh           # Backup-first installer
+├── ONE_SHOT_PROMPT.md   # Copy/paste prompt for AI users
 ├── PROMPT.md            # AI-assisted setup prompt
 ├── README.md
 └── LICENSE
 ```
 
 ## Quick Start
+
+### AI One-Shot
+
+For the easiest AI-assisted install, copy the prompt in [ONE_SHOT_PROMPT.md](ONE_SHOT_PROMPT.md) and paste it into Codex or Claude Code.
+
+It tells the agent to clone the repo, inspect your existing terminal setup, back up files, install the theme, validate the config, and explain how to reload.
+
+### Shell Install
 
 ```bash
 git clone https://github.com/thee-banda/Recreate-My-Clean-Cyberpunk-WezTerm-Powerlevel10k-Setup.git
@@ -84,8 +93,8 @@ exec zsh
 
 Use this if you want Codex or Claude Code to inspect your existing setup and adapt the theme safely.
 
-1. Open this repo in your AI coding agent.
-2. Paste the contents of [PROMPT.md](PROMPT.md).
+1. Copy [ONE_SHOT_PROMPT.md](ONE_SHOT_PROMPT.md).
+2. Paste it into your AI coding agent.
 3. Ask it to inspect your current terminal files before editing.
 4. Confirm it creates backups and shows diffs.
 
