@@ -30,88 +30,22 @@ The prompt asks Codex to:
 - Show diffs after changes
 - Run syntax checks
 
-## Recommended Tools
+## What You Need
 
-### Homebrew
+This repo is meant to be used with an AI coding agent. Paste [PROMPT.md](PROMPT.md) into one of these tools and let it inspect, install, and configure the setup for your machine:
 
-Most commands below use Homebrew on macOS.
+- [OpenAI Codex](https://openai.com/codex/)
+- [Claude Code](https://www.anthropic.com/claude-code)
 
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+The prompt may install or configure tools like:
 
-### WezTerm
+- [WezTerm](https://wezfurlong.org/wezterm/)
+- zsh
+- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- MesloLGS Nerd Font Mono or another Nerd Font
+- Optional shell helpers such as `eza`, `zoxide`, `zsh-autosuggestions`, and `zsh-syntax-highlighting`
 
-[WezTerm](https://wezfurlong.org/wezterm/) is the terminal emulator used for the dark translucent window, blur, padding, and font rendering.
-
-```sh
-brew install --cask wezterm
-```
-
-### zsh
-
-macOS already ships with zsh. If you want the Homebrew version:
-
-```sh
-brew install zsh
-```
-
-Set zsh as your login shell if needed:
-
-```sh
-chsh -s /bin/zsh
-```
-
-### Powerlevel10k
-
-[Powerlevel10k](https://github.com/romkatv/powerlevel10k) provides the prompt layout and segments.
-
-```sh
-brew install powerlevel10k
-```
-
-Then source it from `~/.zshrc`:
-
-```zsh
-if [[ -r /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
-  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-fi
-[[ -r "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
-```
-
-### Nerd Font
-
-Use a Nerd Font so prompt icons render correctly. This setup uses MesloLGS Nerd Font Mono.
-
-```sh
-brew install --cask font-meslo-lg-nerd-font
-```
-
-### Optional zsh Helpers
-
-These make the shell feel smoother, but the prompt can work without them.
-
-```sh
-brew install zsh-autosuggestions zsh-syntax-highlighting eza zoxide
-```
-
-Add helpers to `~/.zshrc`:
-
-```zsh
-[[ -r /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ -r /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-if command -v eza >/dev/null 2>&1; then
-  alias ls='eza --icons=auto --group-directories-first'
-  alias ll='eza -lah --icons=auto --group-directories-first --git'
-  alias la='eza -a --icons=auto --group-directories-first'
-  alias tree='eza --tree --icons=auto --group-directories-first'
-fi
-
-if command -v zoxide >/dev/null 2>&1; then
-  eval "$(zoxide init zsh)"
-fi
-```
+You do not need to follow a manual install guide from this README. The point is to let the AI agent read your current setup, back it up, and make the safest changes for your environment.
 
 ## License
 
