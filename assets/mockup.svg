@@ -1,0 +1,66 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Clean cyberpunk WezTerm and Powerlevel10k terminal mockup</title>
+  <desc id="desc">A dark translucent terminal mockup with pastel text, transparent prompt segments, white OS icon, cyan path, green prompt arrow, and right-side version and time text.</desc>
+  <defs>
+    <radialGradient id="glow-cyan" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(158 182) rotate(42) scale(406 270)">
+      <stop stop-color="#0ba7b8" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#11111b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-green" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(996 552) rotate(136) scale(422 280)">
+      <stop stop-color="#6ee7b7" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#11111b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="34" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <filter id="text-glow" x="-30%" y="-80%" width="160%" height="260%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#67e8f9" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="#0b1020"/>
+  <rect width="1280" height="720" fill="url(#glow-cyan)"/>
+  <rect width="1280" height="720" fill="url(#glow-green)"/>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="72" y="60" width="1136" height="600" rx="22" fill="#11111B" fill-opacity="0.94" stroke="#313244" stroke-width="2"/>
+    <rect x="72" y="60" width="1136" height="52" rx="22" fill="#181825"/>
+    <path d="M72 91C72 73.8792 85.8792 60 103 60H1177C1194.12 60 1208 73.8792 1208 91V112H72V91Z" fill="#181825"/>
+    <circle cx="105" cy="86" r="9" fill="#F38BA8"/>
+    <circle cx="134" cy="86" r="9" fill="#F9E2AF"/>
+    <circle cx="163" cy="86" r="9" fill="#A6E3A1"/>
+    <text x="640" y="93" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18" fill="#A6ADC8">wezterm · zsh · powerlevel10k</text>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="34" font-weight="700" filter="url(#text-glow)">
+    <text x="116" y="184" fill="#F5F7FF"></text>
+    <text x="166" y="184" fill="#38D9FF"></text>
+    <text x="216" y="184" fill="#38D9FF">~/.config/wezterm</text>
+    <text x="1010" y="184" text-anchor="end" fill="#A6E3A1">24.15.0</text>
+    <text x="1052" y="184" fill="#A6E3A1">⬢</text>
+    <text x="1164" y="184" text-anchor="end" fill="#E9D5FF">09:41 ◷</text>
+
+    <text x="116" y="252" fill="#7CFF9B">❯</text>
+    <text x="166" y="252" fill="#CDD6F4" font-weight="600">source ~/.zshrc</text>
+
+    <text x="116" y="350" fill="#F5F7FF"></text>
+    <text x="166" y="350" fill="#38D9FF"></text>
+    <text x="216" y="350" fill="#38D9FF">~/projects/cyber-term</text>
+    <text x="1010" y="350" text-anchor="end" fill="#A6E3A1">24.15.0</text>
+    <text x="1052" y="350" fill="#A6E3A1">⬢</text>
+    <text x="1164" y="350" text-anchor="end" fill="#E9D5FF">09:42 ◷</text>
+
+    <text x="116" y="418" fill="#7CFF9B">❯</text>
+    <text x="166" y="418" fill="#CDD6F4" font-weight="600">codex</text>
+
+    <text x="116" y="516" fill="#F5F7FF"></text>
+    <text x="166" y="516" fill="#38D9FF"></text>
+    <text x="216" y="516" fill="#38D9FF">~/clean-prompt</text>
+    <text x="954" y="516" text-anchor="end" fill="#F9A8D4">127 ↵</text>
+    <text x="1052" y="516" fill="#A6E3A1">24.15.0 ⬢</text>
+    <text x="1164" y="516" text-anchor="end" fill="#E9D5FF">09:43 ◷</text>
+
+    <text x="116" y="584" fill="#7CFF9B">❯</text>
+    <rect x="166" y="552" width="20" height="44" rx="3" fill="#A6E3A1"/>
+  </g>
+</svg>

@@ -2,6 +2,8 @@
 
 A reusable Codex prompt for recreating a clean, cozy cyberpunk terminal setup with WezTerm, zsh, and Powerlevel10k.
 
+![Clean cyberpunk terminal mockup](assets/mockup.svg)
+
 The style:
 
 - Dark translucent WezTerm background
